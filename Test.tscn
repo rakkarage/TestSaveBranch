@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtiaprehafhm6"]
+
+[ext_resource type="Script" path="res://Test.gd" id="1_6sa5l"]
+
+[node name="A" type="Node" node_paths=PackedStringArray("childNode")]
+script = ExtResource("1_6sa5l")
+childNode = NodePath("B")
+
+[node name="B" type="Node" parent="." node_paths=PackedStringArray("childNode")]
+script = ExtResource("1_6sa5l")
+childNode = NodePath("C")
+
+[node name="C" type="Node" parent="B"]
+script = ExtResource("1_6sa5l")
